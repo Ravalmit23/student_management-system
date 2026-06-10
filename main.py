@@ -18,7 +18,7 @@ class system:
             if choice==1:
                 self.add_details()
             elif choice==2:
-                pass
+                self.view_details()
             elif choice==3:
                 pass
             elif choice==4:
@@ -37,6 +37,11 @@ class system:
             marks=int(input(f"ENTER {names} SUBJECT MARK="))
             self.details["marks"][names]=marks
         print(self.details)
+    def view_details(self):
+        if self.details["name"]:
+            print(self.details)
+        else:
+            print("THERE ARE NO DETAILS IN LIST")
             
 
 
